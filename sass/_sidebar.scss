@@ -3,3 +3,41 @@
     grid-column: sidebar-start / sidebar-end;
     grid-row: 1 / -1;
 }
+
+.menu {
+    position: fixed;
+    width: 4.5rem;
+    height: 2.8rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    top: 2rem;
+    left: 1.7rem;
+    cursor: pointer;
+    outline: none;
+
+    &__btn {
+        background-color: #fff;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        top:0;
+    
+        &::before,
+        &::after {
+            background-color: #fff;
+            height: 2px;
+            width: 100%;
+            content: '';
+            display: block;
+        }
+    
+        &::before {
+            transform: translateY(1.3rem);
+        }
+    
+        &::after {
+            transform: translateY(2.4rem);
+        }
+    }
+}
