@@ -2,6 +2,11 @@
     background-color: $color-primary;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 1 / -1;
+
+    @media only screen and (max-width: $bp-large) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+    }
 }
 
 .menu {
@@ -15,6 +20,17 @@
     left: 1.7rem;
     cursor: pointer;
     outline: none;
+
+    @media only screen and (max-width: $bp-large) {
+        top: 0;
+        left: auto;
+        right: 0;
+        height: 5.9rem;
+        width: 8rem;
+        background-color: $color-primary;
+        padding: 1.5rem;
+        z-index: 10;
+    }
 
     &__btn {
         background-color: #fff;
@@ -38,6 +54,19 @@
     
         &::after {
             transform: translateY(2.4rem);
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            position: relative;
+            top: auto;
+
+            &::before {
+                transform: translateY(-1.3rem);
+            }
+        
+            &::after {
+                transform: translateY(1.1rem);
+            }
         }
     }
 }
